@@ -41,13 +41,17 @@ export default class ProductDetails {
 
   addToCart() {
     // get the cart items from local storage
-    let cartItems = getLocalStorage("so-cart") || [];
+    let cart = getLocalStorage("so-cart") || [];
+
+    if (!Array.isArray(cart)) {
+      cart = [];
+    }
 
     // add the current product to the cart
-    cartItems.push(this.product);
+    cart.push(this.product);
 
     // set the cart items in local storage
-    setLocalStorage("so-cart", cartItems);
+    setLocalStorage("so-cart", cart);
   }
 
   renderProductDetails(selector) {
