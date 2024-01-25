@@ -185,6 +185,30 @@ button {
   margin: 0.5em 0;
 }
 
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.category li a {
+  color: #303030;
+  margin-top: 2px;
+  text-decoration: none;
+}
+
+.category li {
+  padding: 0.5em;
+  margin: 1em;
+  width: 150px;
+}
+
+.category-title {
+  text-transform: capitalize;
+  color: var(--accent-color);
+}
+
 .product-card__discount {
   color: rgb(183, 40, 40);
   text-decoration: line-through;
